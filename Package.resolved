@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "MDFInternationalization",
+        "repositoryURL": "https://github.com/spm-ports/material-internationalization-ios",
+        "state": {
+          "branch": null,
+          "revision": "5732ccba60cae27980465e767d8484b9908f83c4",
+          "version": "3.0.0"
+        }
+      },
+      {
+        "package": "MDFTextAccessibility",
+        "repositoryURL": "https://github.com/spm-ports/material-text-accessibility-ios",
+        "state": {
+          "branch": null,
+          "revision": "2970e7fcb0b7c42ce77e3d018862fd3d22263741",
+          "version": "2.0.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
