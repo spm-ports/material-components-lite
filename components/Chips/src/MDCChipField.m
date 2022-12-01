@@ -15,7 +15,7 @@
 #import "MDCChipField.h"
 
 #import "MDCChipView.h"
-#import <MDFInternationalization/MDFInternationalization.h>
+#import "MDFInternationalization.h"
 
 #import "MDCChipFieldDelegate.h"
 #import "MDCChipViewDeleteButton.h"

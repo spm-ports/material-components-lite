@@ -46,6 +46,8 @@ let package = Package(
                 dependencies: [
                     .product(name: "MDFInternationalization", package: "material-internationalization-ios"),
                     .product(name: "MDFTextAccessibility", package: "material-text-accessibility-ios"),
+                    .target(name: "MDFInternationalizationHeaders"),
+                    .target(name: "MDFTextAccessibilityHeaders"),
                     .target(name: "Elevation"),
                     .target(name: "Ink"),
                     .target(name: "Ripple"),
@@ -53,6 +55,7 @@ let package = Package(
                     .target(name: "ShadowElevations"),
                     .target(name: "ShadowLayer"),
                     .target(name: "Shapes"),
+                    .target(name: "ShapeLibrary"),
                     .target(name: "Typography"),
                     .target(name: "Math")
                 ],
@@ -72,6 +75,7 @@ let package = Package(
                     .target(name: "Elevation"),
                     .target(name: "ShadowElevations"),
                     .target(name: "Shapes"),
+                    .target(name: "ShapeLibrary"),
                     .target(name: "TextFields")
                 ],
                 path: "components/Chips/",
@@ -164,10 +168,12 @@ let package = Package(
                     "src/Theming",
                     "src/private/MDCTextField+Testing.h"
                 ],
-                sources: ["src"]),
+                sources: ["src"],
+                publicHeadersPath: "src"),
         .target(name: "Typography",
                 dependencies: [
                     .product(name: "MDFTextAccessibility", package: "material-text-accessibility-ios"),
+                    .target(name: "MDFTextAccessibilityHeaders"),
                     .target(name: "Application"),
                     .target(name: "Math")
                 ],
