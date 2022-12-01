@@ -12,6 +12,7 @@ let package = Package(
         .library(
             name: "MaterialComponents",
             targets: [
+                "Availability",
                 "AnimationTiming",
                 "Buttons",
                 "Chips",
@@ -45,14 +46,15 @@ let package = Package(
                 dependencies: [
                     .product(name: "MDFInternationalization", package: "material-internationalization-ios"),
                     .product(name: "MDFTextAccessibility", package: "material-text-accessibility-ios"),
-                    .target(name:"Elevation"),
-                    .target(name:"Ink"),
-                    .target(name:"Ripple"),
-                    .target(name:"ShadowElevations"),
-                    .target(name:"ShadowLayer"),
-                    .target(name:"Shapes"),
-                    .target(name:"Typography"),
-                    .target(name:"Math")
+                    .target(name: "Elevation"),
+                    .target(name: "Ink"),
+                    .target(name: "Ripple"),
+                    .target(name: "Shadow"),
+                    .target(name: "ShadowElevations"),
+                    .target(name: "ShadowLayer"),
+                    .target(name: "Shapes"),
+                    .target(name: "Typography"),
+                    .target(name: "Math")
                 ],
                 path: "components/Buttons/",
                 exclude: [
@@ -69,7 +71,8 @@ let package = Package(
                 dependencies:[
                     .target(name: "Elevation"),
                     .target(name: "ShadowElevations"),
-                    .target(name: "Shapes")
+                    .target(name: "Shapes"),
+                    .target(name: "TextFields")
                 ],
                 path: "components/Chips/",
                 sources: ["src"],
@@ -146,6 +149,7 @@ let package = Package(
         .target(name: "TextFields",
                 dependencies:[
                     .product(name: "MDFInternationalization", package: "material-internationalization-ios"),
+                    .target(name: "MDFInternationalizationHeaders"),
                     .target(name:"Availability"),
                     .target(name:"AnimationTiming"),
                     .target(name:"Buttons"),
@@ -163,6 +167,7 @@ let package = Package(
                 sources: ["src"]),
         .target(name: "Typography",
                 dependencies: [
+                    .product(name: "MDFTextAccessibility", package: "material-text-accessibility-ios"),
                     .target(name: "Application"),
                     .target(name: "Math")
                 ],
@@ -183,6 +188,14 @@ let package = Package(
         .target(name: "Math",
                 path: "components/private/Math/",
                 sources: ["src"],
-                publicHeadersPath: "src")
+                publicHeadersPath: "src"),
+        .target(name: "MDFInternationalizationHeaders",
+                path: "include/MDFInternationalization/",
+                sources: ["."],
+                publicHeadersPath: "."),
+        .target(name: "MDFTextAccessibilityHeaders",
+                path: "include/MDFTextAccessibility/",
+                sources: ["."],
+                publicHeadersPath: ".")
     ]
 )

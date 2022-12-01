@@ -14,7 +14,7 @@
 
 #import "MDCTextInputControllerFilled.h"
 
-#import <MDFInternationalization/MDFInternationalization.h>
+#import "MDFInternationalization.h"
 
 #import "MDCMultilineTextField.h"
 #import "MDCTextInput.h"

@@ -14,7 +14,7 @@
 
 #import "MDCTextInputControllerOutlined.h"
 
-#import <MDFInternationalization/MDFInternationalization.h>
+#import "MDFInternationalization.h"
 
 #import "MDCTextInput.h"
 #import "MDCTextInputBorderView.h"
